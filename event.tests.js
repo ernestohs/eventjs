@@ -95,5 +95,3 @@ UnitTests.test = function () {
       ok( !eventsCache.has(fixture), 'The event isn\'t in the cache' );
     });
 };
-
-UnitTests.test ();
