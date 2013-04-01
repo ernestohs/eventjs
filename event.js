@@ -77,7 +77,9 @@
                     var keyEvent = type + handler;
 
                     elem[keyEvent] = function () {
-                        handler(window.event);
+                        var event = window.event
+                        event['target'] = event['srcElement'];
+                        handler(event);
                     };
 
                     elem.attachEvent('on' + type, elem[keyEvent]);
